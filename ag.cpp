@@ -18,7 +18,7 @@ AG::AG()
             poblacion[j]=prueba;
         }
         best=elite();
-        if(1){//ESTO ES PARA IMPRIMIR, NO INFLUTE EN EL ALGORITMO
+        if(1){//ESTO ES PARA IMPRIMIR, NO INFLUYE EN EL ALGORITMO
             cdout<<"\n";
             for(int j=0;j<TAM_POBLACION;j=j+10){
                 for(int i=0;i<TAM_CROMOSOMA;i++)
@@ -94,7 +94,7 @@ float AG::funcionObjetivo(float * cromosoma)
     }
     return y;
 }
-//MUTAS LA SOLUCION MUTANTE CON EL INDIVIDUO DE PRUEBA
+//MUTAS LA INDIVIDUO MUTANTE CON EL INDIVIDUO DE PRUEBA
 void AG::mutacion(int index){
     int num;
     srand(rdtsc());
