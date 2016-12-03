@@ -12,10 +12,10 @@ AG::AG()
     for(int g=0;g<GENERACIONES;g++){
         evaluacion();//OBTIENE TODOS LOS FITNESS
         for(int j=0;j<TAM_POBLACION;j++){
-        generaMutante(j);
-        mutacion(j);//GENERAS INDIVIDUO DE PRUEBA MEDIANTE LA MUTACION
-        if(poblacion[j].fitness>prueba.fitness)//SI TU INDIVIDUO DE PRUEBA ES MEJOR QUE EL INDIVIDUO ACTUAL, LO SUSTITUYES
-            poblacion[j]=prueba;
+            generaMutante(j);
+            mutacion(j);//GENERAS INDIVIDUO DE PRUEBA MEDIANTE LA MUTACION
+            if(poblacion[j].fitness>prueba.fitness)//SI TU INDIVIDUO DE PRUEBA ES MEJOR QUE EL INDIVIDUO ACTUAL, LO SUSTITUYES
+                poblacion[j]=prueba;
         }
         best=elite();
         if(1){//ESTO ES PARA IMPRIMIR, NO INFLUYE EN EL ALGORITMO
